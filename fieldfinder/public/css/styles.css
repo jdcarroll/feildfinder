@@ -26,6 +26,15 @@ h1{
 }
 
 img{
-	margin:20 auto;
+	margin: 20px auto;
 	display:block;
+}
+
+#img_container{
+	width: 80%;
+	margin: 0 auto;
+}
+
+#logo{
+	width: 300px;
 }
