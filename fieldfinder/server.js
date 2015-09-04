@@ -8,10 +8,8 @@ var db = mongojs('contactlist', ['contactlist']);
 var bodyParser = require('body-parser');
 //Added by Jeff Carroll
 
-app.set('views',__dirname);
-app.set('view engine','ejs');
-
-app.use("/public", express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname + "/public"));
+app.use(bodyParser.json());
 
 //Added by Jeff Carroll
 app.use(bodyParser.json());
@@ -94,18 +92,18 @@ app.put('/contactlist/:id', function(req, res){
 //Added by Jeff Carroll
 
 
+//I Commented this out because we are no longer using ejs
+// app.get('/results',function(req,res){
 
-app.get('/results',function(req,res){
+// 	res.render('./views/results');
 
-	res.render('./views/results');
+// });
 
-});
+// app.get('/details',function(req,res){
 
-app.get('/details',function(req,res){
+// 	res.render('./views/details');
 
-	res.render('./views/details');
-
-});
+// });
 
 app.listen(7000);
 console.log('Listening on port 7000');

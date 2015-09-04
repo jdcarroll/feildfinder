@@ -1,0 +1,42 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+		<title>Field Finder App</title>
+	</head>
+	<body>
+		<div class="container" ng-controller="AppCtrl">
+			<div id="img_container">
+				<img id="logo" src = "images/logo200.png">
+			</div>
+			<h1>Field Finder</h1>
+			<div class="form-inline">
+				<input class="form-control" type="text" placeholder="Search by Zip code" ng-model="query" id="query">
+				
+				<button class="btn btn-primary" ng-click="search()" id="search"> search</button>
+
+				<div id="content">
+					<div id="radar"></div>
+				</div>
+
+			</div><!--end of form inline-->
+			<ng-view> 
+		</div><!--end of app Controller-->
+
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript" src="controllers/weatherApi.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.min.js"></script>
+		<script src="controllers/controller.js"></script>
+	</body>
+</html>

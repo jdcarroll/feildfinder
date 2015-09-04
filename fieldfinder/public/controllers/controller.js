@@ -1,4 +1,11 @@
-var myApp = angular.module('myApp', []);
+var myApp = angular.module('myApp', ['ngRoute']);
+myApp.config(function($routeProvider){
+    $routeProvider
+        .when("/results",{
+            templateUrl: "views/results",
+            controller: "AppCtrl"
+        })
+});
 myApp.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
     console.log("Hello World from controller");
     var block = 0;

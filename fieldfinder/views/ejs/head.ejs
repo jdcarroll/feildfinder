@@ -12,3 +12,13 @@
 
 
 </head>
+<body>
+	<div class="container" ng-controller="AppCtrl">
+		<div class="form-inline">
+		    <input class="form-control" type="text" placeholder="Search by Zip code" ng-model="query" id="query">
+		        
+		    <button class="btn btn-primary" ng-click="search()" id="search"> search</button>
+
+		    <div id="content">
+		        <div id="radar"></div>
+		    </div>
