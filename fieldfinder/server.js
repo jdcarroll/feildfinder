@@ -5,8 +5,7 @@ var app = express();
 app.set('views',__dirname);
 app.set('view engine','ejs');
 
-
-app.use(express.static(__dirname + '/public'));
+app.use("/public", express.static(path.join(__dirname, 'public')));
 
 app.get('/',function(req,res){
 
@@ -24,3 +23,7 @@ app.get('/results',function(req,res){
 
 app.listen(7000);
 console.log('Listening on port 7000');
+
+
+
+
