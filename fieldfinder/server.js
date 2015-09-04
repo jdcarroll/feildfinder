@@ -19,7 +19,11 @@ app.get('/results',function(req,res){
 
 });
 
+app.get('/details',function(req,res){
 
+	res.render('./views/details');
+
+});
 
 app.listen(7000);
 console.log('Listening on port 7000');
