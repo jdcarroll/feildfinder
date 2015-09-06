@@ -1,0 +1,45 @@
+1.  Start with favstar div hidden
+2.  If logged in, show the favstar div with empty star
+3.  If userId matches a userid from the favorite list for a result item, show the dark star
+4.  if the user clicks on the empty star, push their userId to the list of users who like the results, star becomes dark
+5.  If the user clicks on the filled star, delete their userId from the list users who like the results, star becomes light
+
+<!-- css -->
+#favstar {
+    visibility: hidden;
+}
+
+
+
+
+<!-- need to have jquery for this to work! -->
+
+<div id="favstar">
+
+</div>
+
+if uid == (userid from db)
+
+
+
+
+
+FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+
+    var uid = response.authResponse.userID;
+    var accessToken = response.authResponse.accessToken;
+
+    console.log("you are logged in");
+
+
+  } else if (response.status === 'not_authorized') {
+    // the user is logged in to Facebook, 
+    // but has not authenticated your app
+  } else {
+    // the user isn't logged in to Facebook.
+
+    console.log("you are NOT logged in");
+
+  }
+ });
