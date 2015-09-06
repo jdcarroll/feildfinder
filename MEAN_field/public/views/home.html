@@ -1,5 +1,18 @@
 <div class="jumbotron text-center">
-	<h1>Home Page 4 Life</h1>
+	<!-- Field Finder Logo -->
+	<div id="img_container">
+		<img id="logo" src = "images/logo200.png">
+	</div>
 
-	<p>{{ tagline }}</p>
+	<p>Find the paintball field for you:</p>
+
+	<!-- Input for zip code Search -->
+	<div class="form-inline">
+	    <input class="form-control" type="text" placeholder="Search by Zip code" ng-model="query" id="query">
+	        
+	    <button class="btn btn-primary" ng-click="search()" id="search"> search</button>
+
+	    <div id="content">
+	        <div id="radar"></div>
+	</div>
 </div>

@@ -1,1 +1,52 @@
+/* Color Scheme 					*/
+/* Adobe Kuler:  	Yellow Mustang  */
+/* Dark Yellow:		#F3BD1C			*/
+/* Light Yellow:	#FFDA53			*/
+/* Light Gray:		#CCD0D1			*/
+/* Dark Gray:		#8C959E			*/
+/* Black: 			#1C201F			*/
+
+
+body {
+    background-image: url("../images/splatter.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container{
+	background-color: rgba(140, 149, 158, .7);
+	border-radius: 10px;
+	margin-top: 50px;
+	min-height: 500px;
+}
+
+.navbar, .navbar-inverse{
+	margin-top: 15px;
+}
+
+h1{
+	text-align: center;
+	color: #F3BD1C;
+}
+
+img{
+	margin: 20px auto;
+	display:block;
+}
+
+#img_container{
+	width: 80%;
+	margin: 0 auto;
+}
+
+#logo{
+	width: 300px;
+}
+
+
+
+
+
+
 body { padding-top:30px; }
