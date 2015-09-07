@@ -1,11 +1,24 @@
+<!-- Details page will have details about a field -->
+<!-- Current weather conditions will be posted -->
+<!-- Comments about field will be shown -->
+<!-- If logged into FB, will be able to post a comment -->
+
 <div class="jumbotron text-center">
 	<h1>Details go here</h1>
 
-	<p>{{ tagline }}</p>
-
-
-
-
-
 	
+	<div class="results_item" ng-repeat="result in results track by $index">
+	
+		Name: {{ result.name }}<br/>
+		Address: {{ result.address }}<br/>
+		City: {{ result.city }}<br/>
+		State: {{ result.state }}<br/>
+		Zip: {{ result.zip }}<br/>
+		Phone Number: {{ result.phone }}<br/>
+				
+	</div><!-- closes results_item -->
+
+
+
+
 </div>
