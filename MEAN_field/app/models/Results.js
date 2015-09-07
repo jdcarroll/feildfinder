@@ -1,9 +1,11 @@
+// ********* KAR:  Need to get this working with our database and mongoose
+
 // grab the mongoose module
 var mongoose = require('mongoose');
 
-// define our nerd model
+// define our results model
 // module.exports allows us to pass this to other files when it is called
-module.exports = mongoose.model('Field', {
+module.exports = mongoose.model('Results', {
 	name : {type : String},
 	address: {type : String},
 	city: {type : String},

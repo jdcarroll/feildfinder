@@ -1,14 +1,24 @@
+// ********* KAR:  Need to update with correct db info! ******
+
 // modules =================================================
-var express        = require('express');
-var app            = express();
-var mongoose       = require('mongoose');
-var bodyParser     = require('body-parser');
-var methodOverride = require('method-override');
+var express        	= require('express');
+var path 			= require('path');
+var app            	= express();
+var mongoose       	= require('mongoose');
+var bodyParser     	= require('body-parser');
+var methodOverride 	= require('method-override');
+var mongojs 		= require('mongojs');
+
+
 
 // configuration ===========================================
 	
 // config files
 var db = require('./config/db');
+
+// below is from Jeff's app; above is from the MEAN app
+// see the mongoose connect below as well, we can set up a db server for the project
+var db 	= mongojs('contactlist', ['contactlist']);
 
 // set our port
 var port = process.env.PORT || 7000; 

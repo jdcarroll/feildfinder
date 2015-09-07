@@ -11,9 +11,7 @@ var bodyParser = require('body-parser');
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 
-//Added by Jeff Carroll
-app.use(bodyParser.json());
-//Added by Jeff Carroll
+
 
 app.get('/',function(req,res){
 
