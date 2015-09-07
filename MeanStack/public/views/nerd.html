@@ -1,0 +1,30 @@
+<div class="jumbotron text-center">
+	<h1>Nerds and Proud</h1>
+
+	<p>{{ tagline }}</p>
+</div>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Street</th>
+				<th>City</th>
+				<th>State</th>
+				<th>Zip</th>
+				<th>Phone</th>
+			</tr>
+		</thead>
+		</tbody>
+			<tr ng-repeat="contact in contactList">
+				<td><a href="/geeks/{{ contact._id}}">{{ contact.name }}</a></td>
+				<td>{{ contact.street }}</td>
+				<td>{{ contact.city }}</td>
+				<td>{{ contact.state }}</td>
+				<td>{{ contact.zip }}</td>
+				<td>{{ contact.Phone }}</td>
+				<td><button class="btn btn-danger" ng-click="remove(contact._id)">Remove</button></td>
+				<td><button class="btn btn-warning" ng-click="edit(contact._id)">Edit</button></td>	
+			</tr>
+		</tbody>
+	</table>
+
