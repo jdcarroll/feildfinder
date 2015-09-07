@@ -14,6 +14,8 @@ angular.module('ResultsCtrl', [])
 		  {name: 'Field 1', address: '123 Main Street', city: 'Orlando', state: 'FL', zip: '32804', phone: '(407) 123-4567'},
 		];
 
+		// $scope.results = ResultsService.getResults(zip);
+
 }]);
 
 

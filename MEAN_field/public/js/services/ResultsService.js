@@ -18,14 +18,9 @@ angular.module('ResultsService', []).factory('Results', ['$http', function($http
 		return _zip;
 	}
 
-	// From NerdService:
-	/* return {
-        // call to get all nerds
-        get : function() {
-            return $http.get('/api/nerds');
-        }
-     
-    } */
+	/* service.getResults = function(zip){
+
+	} */
 
 }]);
 
