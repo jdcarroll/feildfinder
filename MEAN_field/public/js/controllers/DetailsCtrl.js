@@ -3,6 +3,7 @@ angular.module('DetailsCtrl', []).controller('DetailsController', function($scop
 	$scope.tagline = "Details go here!";
 	console.log("Hello World from DetailsController!");	
 
+
 	// Place weather API stuff here
 
 	// Need to grab the field id from the url
@@ -12,6 +13,7 @@ angular.module('DetailsCtrl', []).controller('DetailsController', function($scop
 
 	// to be deleted later
 	// testing without database
+
 		$scope.results = [
 		  {name: 'Field 1', address: '123 Main Street', city: 'Orlando', state: 'FL', zip: '32804', phone: '(407) 123-4567'},
 		];

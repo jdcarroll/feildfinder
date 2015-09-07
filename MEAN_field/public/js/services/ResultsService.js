@@ -7,6 +7,21 @@
 
 angular.module('ResultsService', []).factory('Results', ['$http', function($http) {
 
+	
+	var mongojs = require('mongojs');
+	var db = mongojs('test',['fields']);
+
+	$address = str.trim();
+	$address2 = str.replace(" ","+");
+
+    $contents = file.get.contents("https://maps.googleapis.com/maps/api/geocode/json?address={'$address2'}&key=AIzaSyDge7ELV8muCUhChWhVbmmV_gEH73OEQlM");
+    $contents2 = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?address={'$raddress2'}&key=AIzaSyDge7ELV8muCUhChWhVbmmV_gEH73OEQlM")
+	
+	$encoded = json_decode($contents);
+	$encoded2 = json_decode($contents2);
+
+	db.fields.find([_id:""]);	
+
 	var service = {};
 	var _zip = '';
 
