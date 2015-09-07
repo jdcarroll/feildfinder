@@ -18,7 +18,7 @@ var db = require('./config/db');
 
 // below is from Jeff's app; above is from the MEAN app
 // see the mongoose connect below as well, we can set up a db server for the project
-var db 	= mongojs('contactlist', ['contactlist']);
+var db 	= mongojs('fieldlist', ['fieldlist']);
 
 // set our port
 var port = process.env.PORT || 7000; 

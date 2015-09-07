@@ -1,32 +1,31 @@
+// Good reference for angular factories / service:
+// http://tylermcginnis.com/angularjs-factory-vs-service-vs-provider/
+// Factories are the most popular way to create and configure a service. 
+// You just create an object, add properties to it, then return that same object. 
+// Then when you pass the factory into your controller, those properties on the 
+// object will now be available in that controller through your factory. 
+
 angular.module('ResultsService', []).factory('Results', ['$http', function($http) {
 
-	
+	var service = {};
+	var _zip = '';
 
-}]);
+	service.setZip = function(zip){
+		_zip = zip;
+	}
 
-// From NerdService:
-angular.module('NerdService', []).factory('Nerd', ['$http', function($http) {
+	service.getZip = function(){
+		return _zip;
+	}
 
+	// From NerdService:
 	return {
         // call to get all nerds
         get : function() {
             return $http.get('/api/nerds');
-        },
-
-
-        // these will work when more API routes are defined on the Node side of things
-        // call to POST and create a new nerd
-        create : function(nerdData) {
-            return $http.post('/api/nerds', nerdData);
-        },
-
-        // call to DELETE a nerd
-        delete : function(id) {
-            return $http.delete('/api/nerds/' + id);
         }
-    }       
-
-	
+     
+    } 
 
 }]);
 
@@ -49,7 +48,7 @@ app.get('/searchcontactlist/:query', function(req, res){
 	console.log('I recieved a get request');
 	var query = req.params.query;
 	
-	db.contactlist.find({ zip : {$regex: '^' + query }}, function(err, doc){
+	db.fields.find({ zip : {$regex: '^' + query }}, function(err, doc){
 		res.json(doc);
 	});
 });
@@ -59,10 +58,10 @@ app.get('/searchcontactlist/:query', function(req, res){
 // Maybe for comments?
 
 // Add new paint ball fields into the database
-app.post('/contactlist', function(req, res){
+/* app.post('/contactlist', function(req, res){
 	
 	db.contactlist.save(req.body, function(err, doc){
 		res.json(doc);
 	});
-});
+}); */
 

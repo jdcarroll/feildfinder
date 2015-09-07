@@ -1,5 +1,7 @@
+// ******* KAR:  Need to get this working with our database
+
 // grab the nerd model we just created
-var Field = require('./models/field');
+var Results = require('./models/results');
 
 module.exports = function(app) {
 	
@@ -8,16 +10,16 @@ module.exports = function(app) {
 	// authentication routes
 
         // sample api route
-        app.get('/api/nerds', function(req, res) {
-            // use mongoose to get all nerds in the database
-            Nerd.find(function(err, nerds) {
+        app.get('/api/results', function(req, res) {
+            // use mongoose to get all results in the database
+            Results.find(function(err, results) {
 
                 // if there is an error retrieving, send the error. 
                 // nothing after res.send(err) will execute
                 if (err)
                     res.send(err);
 
-                res.json(nerds); // return all nerds in JSON format
+                res.json(results); // return all results in JSON format
             });
         });
 
