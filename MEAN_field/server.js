@@ -16,7 +16,6 @@ console.log(db);
 // set our port
 var port = process.env.PORT || 7000; 
 
-
 // get all data/stuff of the body (POST) parameters
 // parse application/json
 app.use(bodyParser.json()); 

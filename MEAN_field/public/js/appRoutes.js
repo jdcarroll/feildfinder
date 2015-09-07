@@ -21,7 +21,17 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 		.when('/details', {
 			templateUrl: 'views/details.html',
 			controller: 'DetailsController'	
-		});
+		})
+
+		.when("/details/:itemIdx",{
+			templateUrl: 'views/details.html',
+			controller: 'DetailsController'
+		})
+
+		.when("/results/:itemIdx",{
+			templateUrl: 'views/results.html',
+			controller: 'ResultsController'	
+		})	
 
 	$locationProvider.html5Mode(true);
 
