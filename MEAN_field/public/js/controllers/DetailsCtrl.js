@@ -3,6 +3,6 @@ angular.module('DetailsCtrl', []).controller('DetailsController', function($scop
 	$scope.tagline = "Details go here!";
 	console.log("Hello World from DetailsController!");	
 
-	// Placing weather API stuff here
+	// Place weather API stuff here
 
 });

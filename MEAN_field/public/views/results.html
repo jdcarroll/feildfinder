@@ -2,4 +2,25 @@
 	<h1>Results go here</h1>
 
 	<p>{{ tagline }}</p>
+
+	<div class="results_item" ng-repeat="result in results track by $index">
+	
+			Name: {{ result.name }}<br/>
+			Address: {{ result.address }}<br/>
+			City: {{ result.city }}<br/>
+			State: {{ result.state }}<br/>
+			Zip: {{ result.zip }}<br/>
+			Phone Number: {{ result.phone }}<br/>
+			
+			<a href="#/details/{{$index}}">Details</a>	
+			
+	</div><!-- closes results_item -->
+
+
+
+
+
+
+
+
 </div>

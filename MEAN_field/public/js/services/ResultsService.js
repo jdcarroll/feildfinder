@@ -19,13 +19,13 @@ angular.module('ResultsService', []).factory('Results', ['$http', function($http
 	}
 
 	// From NerdService:
-	return {
+	/* return {
         // call to get all nerds
         get : function() {
             return $http.get('/api/nerds');
         }
      
-    } 
+    } */
 
 }]);
 
@@ -33,7 +33,7 @@ angular.module('ResultsService', []).factory('Results', ['$http', function($http
 // From Jeff's app:
 
 // main read results function designed to pull all the main data from the database
-app.get('/contactlist', function(req, res) {
+/* app.get('/contactlist', function(req, res) {
 	console.log('I recieved a get request');
 
 	db.contactlist.find(function(err, docs){
@@ -53,7 +53,7 @@ app.get('/searchcontactlist/:query', function(req, res){
 	});
 });
 
-
+*/
 //******* Do not need below functionality for our app *******//
 // Maybe for comments?
 
