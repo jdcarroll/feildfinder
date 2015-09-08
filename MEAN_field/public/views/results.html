@@ -1,6 +1,7 @@
 <!-- Results (list of fields) from zip code search go here -->
 
 <div class="jumbotron text-center">
+<<<<<<< Updated upstream
 	<!-- Field Finder Logo -->
 	<div id="img_container">
 		<img id="logo" src = "images/logo200.png">
@@ -8,6 +9,43 @@
 
 	<p>Find the paintball field for you:</p>
 
+=======
+	<h1>Results go here</h1>
+		<div ng-repeat="result in results track by $index">
+			Name: {{ result.name }}<br/>
+			Address: {{ result.address }}<br/>
+			City: {{ result.city }}<br/>
+			State: {{ result.state }}<br/>
+			Zip: {{ result.zip }}<br/>
+			Phone Number: {{ result.phone }}<br/>
+
+		</div><!-- closes results_item -->	
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Street</th>
+				<th>City</th>
+				<th>State</th>
+				<th>Zip</th>
+				<th>Phone</th>
+			</tr>
+		</thead>
+		</tbody>
+			<tr ng-repeat="result in results track by $index">
+				<td><a href="#/details/{{$index}}">{{ contact.name }}</a></td>
+				<td>{{ contact.street }}</td>
+				<td>{{ contact.city }}</td>
+				<td>{{ contact.state }}</td>
+				<td>{{ contact.zip }}</td>
+				<td>{{ contact.Phone }}</td>
+				<td><button class="btn btn-danger" ng-click="remove(contact._id)">Remove</button></td>
+				<td><button class="btn btn-warning" ng-click="edit(contact._id)">Edit</button></td>	
+			</tr>
+		</tbody>
+	</table>
+			
+>>>>>>> Stashed changes
 	
 
 

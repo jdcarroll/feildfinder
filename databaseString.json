@@ -1,0 +1,285 @@
+{ 
+    "_id" : ObjectId("55e9a577c556608ed80400b1"), 
+    "name" : "Central Florida Paintball", 
+    "address" : "9365 US Highway 98 N", 
+    "city" : "Orlando", 
+    "state" : "FL", 
+    "zip" : "33809", 
+    "phone" : "(863)-858-3154", 
+    "comments" : [
+
+    ], 
+    "ufavs" : [
+
+    ]
+}
+{ 
+    "_id" : ObjectId("55e9a639c556608ed80400b2"), 
+    "name" : "Orlando Paintball", 
+    "address" : "7215 Rose Avenue", 
+    "city" : "Orlando", 
+    "state" : "FL", 
+    "zip" : "32810", 
+    "phone" : "(407)-294-0694", 
+    "comments" : [
+
+    ], 
+    "ufavs" : [
+
+    ]
+}
+{ 
+    "_id" : ObjectId("55e9a7a4c556608ed80400b3"), 
+    "name" : "Paintball World", 
+    "address" : "4801 West Colonial Drive", 
+    "city" : "Orlando", 
+    "state" : "FL", 
+    "zip" : "32808", 
+    "phone" : "(407)-218-9490", 
+    "comments" : [
+
+    ], 
+    "ufavs" : [
+
+    ]
+}
+{ 
+    "_id" : ObjectId("55e9a9fbc556608ed80400b4"), 
+    "name" : "South Tampa Paintball", 
+    "address" : "3378 South 50th Street", 
+    "city" : "Tampa", 
+    "state" : "FL", 
+    "zip" : "33619", 
+    "phone" : "(813)-956-2038", 
+    "comments" : [
+
+    ], 
+    "ufavs" : [
+
+    ]
+}
+{ 
+    "_id" : ObjectId("55e9aaa8c556608ed80400b5"), 
+    "name" : "Blitzkrieg Paintball Field", 
+    "address" : "1006 E Bearss Ave", 
+    "city" : "Tampa", 
+    "state" : "FL", 
+    "zip" : "33549", 
+    "phone" : "(813)-971-4306", 
+    "comments" : [
+
+    ], 
+    "ufavs" : [
+
+    ]
+}
+{ 
+    "_id" : ObjectId("55e9ac09c556608ed80400b6"), 
+    "name" : "Orbital Paintball", 
+    "address" : "12771 US Highway 301 N", 
+    "city" : "Tampa", 
+    "state" : "FL", 
+    "zip" : "33592", 
+    "phone" : "(813)-672-4825", 
+    "comments" : [
+
+    ], 
+    "ufavs" : [
+
+    ]
+}
+{ 
+    "_id" : ObjectId("55e9acb7c556608ed80400b7"), 
+    "name" : "Jungle Games", 
+    "address" : "3255 Robertson Trail", 
+    "city" : "Lutz", 
+    "state" : "FL", 
+    "zip" : "33559", 
+    "phone" : "(727)-937-1755", 
+    "comments" : [
+
+    ], 
+    "ufavs" : [
+
+    ]
+}
+{ 
+    "_id" : ObjectId("55e9b2e3c556608ed80400b8"), 
+    "name" : "Action Town", 
+    "address" : "7925 W. 2nd Court", 
+    "city" : "Hialeah", 
+    "state" : "FL", 
+    "zip" : "33014", 
+    "phone" : "(305)-647-3343", 
+    "comments" : [
+
+    ], 
+    "ufavs" : [
+
+    ]
+}
+{ 
+    "_id" : ObjectId("55e9b343c556608ed80400b9"), 
+    "name" : "Medley Paintball", 
+    "address" : "9185 NW. 96st Street", 
+    "city" : "Medley", 
+    "state" : "FL", 
+    "zip" : "33178", 
+    "phone" : "(305)-888-5552", 
+    "comments" : [
+
+    ], 
+    "ufavs" : [
+
+    ]
+}
+{ 
+    "_id" : ObjectId("55e9b402c556608ed80400ba"), 
+    "name" : "Battle Town", 
+    "address" : "18225 SW 188th St", 
+    "city" : "Miami", 
+    "state" : "FL", 
+    "zip" : "33187", 
+    "phone" : "(305)-878-1731", 
+    "comments" : [
+
+    ], 
+    "ufavs" : [
+
+    ]
+}
+{ 
+    "_id" : ObjectId("55e9c232c556608ed80400bb"), 
+    "name" : "Paintball Adventures", 
+    "address" : "11850 Camden Road", 
+    "city" : "Jacksonville", 
+    "state" : "FL", 
+    "zip" : "32218", 
+    "phone" : "(904)-645-7127", 
+    "comments" : [
+
+    ], 
+    "ufavs" : [
+
+    ]
+}
+{ 
+    "_id" : ObjectId("55e9c325c556608ed80400bc"), 
+    "name" : "GTF Paintball", 
+    "address" : "86588 Goodbread Road", 
+    "city" : "Jacksonville", 
+    "state" : "FL", 
+    "zip" : "32218", 
+    "phone" : "(904)-548-7256", 
+    "comments" : [
+
+    ], 
+    "ufavs" : [
+
+    ]
+}
+{ 
+    "_id" : ObjectId("55e9c3f3c556608ed80400bd"), 
+    "name" : "Whil’s Paintball", 
+    "address" : "8984 Normandy Blvd.", 
+    "city" : "Jacksonville", 
+    "state" : "FL", 
+    "zip" : "32221", 
+    "phone" : "(904)-651-7520", 
+    "comments" : [
+
+    ], 
+    "ufavs" : [
+
+    ]
+}
+{ 
+    "_id" : ObjectId("55e9c4d9c556608ed80400be"), 
+    "name" : "Splatman Paintball Park", 
+    "address" : "454 S Lowder St", 
+    "city" : "Macclenny", 
+    "state" : "FL", 
+    "zip" : "32063", 
+    "phone" : "(904)-586-6573", 
+    "comments" : [
+
+    ], 
+    "ufavs" : [
+
+    ]
+}
+{ 
+    "_id" : ObjectId("55e9c6f0c556608ed80400bf"), 
+    "name" : "Danger Zone Paintball", 
+    "address" : "2100 Bronson Rd", 
+    "city" : "Pensacola", 
+    "state" : "FL", 
+    "zip" : "32506", 
+    "phone" : "(850)-390-6133", 
+    "comments" : [
+
+    ], 
+    "ufavs" : [
+
+    ]
+}
+{ 
+    "_id" : ObjectId("55e9c7c5c556608ed80400c0"), 
+    "name" : "Extreme Rage Paintball Park", 
+    "address" : "6401 Sheridan St", 
+    "city" : "Hollywood", 
+    "state" : "FL", 
+    "zip" : "33024", 
+    "phone" : "(954)-986-9089", 
+    "comments" : [
+
+    ], 
+    "ufavs" : [
+
+    ]
+}
+{ 
+    "_id" : ObjectId("55e9c836c556608ed80400c1"), 
+    "name" : "Hot Shots Paintball", 
+    "address" : "16169 Southern Boulevard", 
+    "city" : "Loxahatchee", 
+    "state" : "FL", 
+    "zip" : "33470", 
+    "phone" : "(561)-798-4717", 
+    "comments" : [
+
+    ], 
+    "ufavs" : [
+
+    ]
+}
+{ 
+    "_id" : ObjectId("55e9ca00c556608ed80400c2"), 
+    "name" : "Family Paintball", 
+    "address" : "26851 SW New York Ave ", 
+    "city" : "Homestead", 
+    "state" : "FL", 
+    "zip" : "33032", 
+    "phone" : "(786)-268-9208", 
+    "comments" : [
+
+    ], 
+    "ufavs" : [
+
+    ]
+}
+{ 
+    "_id" : ObjectId("55eee51ba8268d9fc91621a5"), 
+    "name" : "Jeff Carroll Paintball", 
+    "address" : "1000 North Randolph St", 
+    "city" : "Arlington", 
+    "state" : "VA", 
+    "zip" : "22203", 
+    "phone" : "(561)-400-0007", 
+    "comments" : [
+
+    ], 
+    "ufavs" : [
+
+    ]
+}
