@@ -5,9 +5,6 @@
 <script src="js/weather.js"></script>
 <div class="jumbotron text-center">
 	<h1> {{ result.name }} Details</h1>
-
-	
-	<!-- <div class="results_item" ng-repeat="result in results track by $index"> -->
 	
 		Name: {{ result.name }}<br/>
 		Address: {{ result.address }}<br/>
@@ -16,13 +13,25 @@
 		Zip: {{ result.zip }}<br/>
 		Phone Number: {{ result.phone }}<br/>
 				
-	<!-- </div> --><!-- closes results_item -->
-
+	<!-- div for adding favorites will toggle visibility based on facebook log in status -->
+	<div id="fav">
+		<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+		<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+	</div>
 
 	<!-- weather info will go here -->
-	<div id="content">
-	 
+	<div id="content"></div>
+
+	<!-- div to leave comments will toggle visibility based on facebook log in status -->
+	<div id="lvComment">
+		<form>
+			Leave a comment about this field:
+			<input type="text" name="comment">
+			<button class="btn btn-lg btn-primary btn-block" id="commentButton">Submit</button>
+		</form>	
 	</div>
+
+	<!-- comments about field will go here -->
 
 
 </div>

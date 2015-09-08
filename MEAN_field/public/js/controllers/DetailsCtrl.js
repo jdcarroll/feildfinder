@@ -1,22 +1,85 @@
 angular.module('DetailsCtrl', []).controller('DetailsController', function($scope, $http, $routeParams) {
-
 	
 	console.log("Hello World from DetailsController!");	
 
-
-	// Place weather API stuff here
 	var id = $routeParams.itemIdx
 
-	$http.get('/details/' + id).success(function(response){
+	//=========== Facebook log in code
+
+	// This is called with the results from from FB.getLoginStatus().
+  	function statusChangeCallback(response) {
+    	console.log('statusChangeCallback');
+    	console.log(response);
+
+    	window.fbstatus = response.status;
+		console.log(window.fbstatus);
+
+	    if (response.status === 'connected') {
+	      // Logged into your app and Facebook.
+	    	var uid = response.authResponse.userID;
+    		var accessToken = response.authResponse.accessToken;
+
+    		// show divs for favorite & make a comment
+
+    		// document.getElementById("favs").style.visibility = "hidden";
+    		// document.getElementById("favs").style.visibility = "visible";
+
+
+
+
+	    } else if (response.status === 'not_authorized') {
+	      // The person is logged into Facebook, but not your app.
+	 
+	    } else {
+
+	    }
+	  }
+
+	// This function is called when someone finishes with the Login
+  	// Button.  See the onlogin handler attached to it in the sample
+  	// code below.
+  	function checkLoginState() {
+    	FB.getLoginStatus(function(response) {
+      		statusChangeCallback(response);
+    	});
+  	}
+
+  	// initialize Facebook, getLogin Status
+	window.fbAsyncInit = function() {
+		FB.init({
+			appId      : '890967984321126',
+			cookie     : true,  // enable cookies to allow the server to access 
+		                        // the session
+			xfbml      : true,  // parse social plugins on this page
+			version    : 'v2.2' // use version 2.2
+		});
+
+		FB.getLoginStatus(function(response) {
+    		statusChangeCallback(response);
+  		});
+	};
+
+	// Load the SDK asynchronously	
+	(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=890967984321126";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+
+	//=========== Populate the dynamic content
+
+	$http.get('/details/' + id).success(function(response){	
 			
-			
+			// $scope.result is populated with the response from the $http get call
 			$scope.result = response;
 			
-			
+			// $scope.tagline is populated with the result name + "Details"
 			$scope.tagline = $scope.result.name + "Details" ;
-			var zip = $scope.result.zip;
 			
-
+			// zip is set to the zip of the result; zip is used to call weather API
+			var zip = $scope.result.zip;
 			var service_URL = "http://api.wunderground.com/api/ae9eea20a89e3294/geolookup/conditions/animatedradar/q/" + zip + ".json";
 
 			$http.get(service_URL).success(function(parsed_json) {
@@ -25,24 +88,11 @@ angular.module('DetailsCtrl', []).controller('DetailsController', function($scop
 		  	  var state = parsed_json['location']['state'];
 		  	  var temp_f = parsed_json['current_observation']['temp_f'];
 
+		  	  // populate the content div with the content from calling the weather api
 		  	  var content = document.querySelector('#content');
 		  	
 		  	  content.innerHTML= "Current temperature in " + location + " " + state + " is: " + temp_f + " <img src='http://api.wunderground.com/api/ae9eea20a89e3294/radar/q/KS/"+ zip +".gif?width=280&height=280&newmaps=1'>";
 			});
 		});
 		
-	
-
-	
-
-
-
-	// Need to grab the field id from the url
-	// save the field id as a var
-	// pass the field id to the database to pull the results list (length = 1)
-	// save results to $scope.results
-
-	// to be deleted later
-	// testing without database
-
 });

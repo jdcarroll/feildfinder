@@ -1,5 +1,3 @@
-// ********* KAR:  Need to update with correct db info! ******
-
 // modules =================================================
 var express        	= require('express');
 var path 			= require('path');
@@ -24,8 +22,7 @@ app.get('/results/:query', function(req, res){
 		res.json(docs);
 	})
 })
-// READ all results from DB ================================
-//==========================================================
+
 // READ ONE record on Details ==============================
 app.get('/details/:id', function(req, res){
 	var id = req.params.id;
@@ -35,9 +32,8 @@ app.get('/details/:id', function(req, res){
 		res.json(doc);
 	})
 });
-// READ ONE record on Details ==============================
-//==========================================================
-// CRUD ====================================================
+
+// END OF CRUD ====================================================
 
 // set our port
 var port = process.env.PORT || 7000; 
@@ -59,11 +55,11 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(express.static(__dirname + '/public')); 
 
 app.get('*', function (req, res) {
-        res.sendfile('public/index.html');
+        res.sendFile('public/index.html');
     })
 // routes ==================================================
 // pass our application into our routes
-require('./app/routes')(app); 
+//require('./app/routes')(app); 
 
 // start app ===============================================
 app.listen(port);	
