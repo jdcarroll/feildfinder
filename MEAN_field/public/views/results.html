@@ -1,19 +1,54 @@
 <!-- Results (list of fields) from zip code search go here -->
 
 <div class="jumbotron text-center">
-	<h1>Results go here</h1>
+	<!-- Field Finder Logo -->
+	<div id="img_container">
+		<img id="logo" src = "images/logo200.png">
+	</div>
 
-	<div class="results_item" ng-repeat="result in results track by $index">
+	<p>Find the paintball field for you:</p>
+
 	
-			Name: {{ result.name }}<br/>
-			Address: {{ result.address }}<br/>
-			City: {{ result.city }}<br/>
-			State: {{ result.state }}<br/>
-			Zip: {{ result.zip }}<br/>
-			Phone Number: {{ result.phone }}<br/>
-			
-			<a href="#/details/{{$index}}">Details</a>	
-			
-	</div><!-- closes results_item -->
 
+
+	<!-- FACEBOOK BUTTON:  CAN BE COPIED AND PASTED -->
+	<div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true"></div>
+
+
+	<!-- Input for zip code Search -->
+	<div class="form-inline">
+	    <input class="form-control" type="text" placeholder="Search by Zip code" ng-model="query" id="query">
+	        
+	    <button class="btn btn-primary" ng-click="search()" id="search">search</button>
+	    <div>{{ message }}</div>
+	</div>
+	<h1>Results</h1>
+
+	<div id="content">
+		<div id="radar"></div>
+	</div>
+
+	<table class='table'>
+		<thead>
+			<tr>
+				<th>Paint Ball Field</th>
+				<th>Street Address</th>
+				<th>City</th>
+				<th>State</th>
+				<th>Zip Code</th>
+				<th>Phone Number</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="result in results track by $index">
+				<td>{{ result.name }}</td>
+				<td>{{ result.address }}</td>
+				<td>{{ result.city }}</td>
+				<td>{{ result.state }}</td>
+				<td>{{ result.zip }}</td>
+				<td>{{ result.phone }}</td>
+				<td><a href="/details/{{result._id}}">Details</a></td>	
+			</tr>
+		</tbody>
+	</table><!-- closes results_item -->
 </div>

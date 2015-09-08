@@ -2,12 +2,12 @@
 <!-- Current weather conditions will be posted -->
 <!-- Comments about field will be shown -->
 <!-- If logged into FB, will be able to post a comment -->
-
+<script src="js/weather.js"></script>
 <div class="jumbotron text-center">
-	<h1>Details go here</h1>
+	<h1> {{ result.name }} Details</h1>
 
 	
-	<div class="results_item" ng-repeat="result in results track by $index">
+	<!-- <div class="results_item" ng-repeat="result in results track by $index"> -->
 	
 		Name: {{ result.name }}<br/>
 		Address: {{ result.address }}<br/>
@@ -16,20 +16,13 @@
 		Zip: {{ result.zip }}<br/>
 		Phone Number: {{ result.phone }}<br/>
 				
-	</div><!-- closes results_item -->
+	<!-- </div> --><!-- closes results_item -->
 
 
 	<!-- weather info will go here -->
 	<div id="content">
-<<<<<<< Updated upstream
-	    <div id="radar"></div>
+	 
 	</div>
-
-	
-=======
-	        <div id="radar"></div>
-	</div>
->>>>>>> Stashed changes
 
 
 </div>

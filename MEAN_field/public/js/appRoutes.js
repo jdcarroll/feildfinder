@@ -17,6 +17,10 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			templateUrl: 'views/results.html',
 			controller: 'ResultsController'	
 		})
+		.when('/results/:query', {
+			templateUrl: 'views/results.html',
+			controller: 'ResultsController'	
+		})
 
 		.when('/details', {
 			templateUrl: 'views/details.html',
@@ -28,10 +32,6 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			controller: 'DetailsController'
 		})
 
-		.when("/results/:itemIdx",{
-			templateUrl: 'views/results.html',
-			controller: 'ResultsController'	
-		})	
 
 	$locationProvider.html5Mode(true);
 

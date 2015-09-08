@@ -11,7 +11,33 @@ var mongojs 		= require('mongojs');
 // configuration ===========================================
 	
 var db = mongojs('test', ['fields']);
-console.log(db);
+
+// CRUD ====================================================
+
+// READ all results from DB ================================
+app.get('/results/:query', function(req, res){
+	console.log('I recieved a get request');
+	var query = req.params.query;
+
+	db.fields.find({ zip : {$regex: '^' + query}}, function(err, docs){
+		console.log(query);
+		res.json(docs);
+	})
+})
+// READ all results from DB ================================
+//==========================================================
+// READ ONE record on Details ==============================
+app.get('/details/:id', function(req, res){
+	var id = req.params.id;
+	console.log(id);
+	db.fields.findOne({_id: mongojs.ObjectId(id)}, function(err, doc){
+		
+		res.json(doc);
+	})
+});
+// READ ONE record on Details ==============================
+//==========================================================
+// CRUD ====================================================
 
 // set our port
 var port = process.env.PORT || 7000; 
@@ -32,6 +58,9 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 // set the static files location /public/img will be /img for users
 app.use(express.static(__dirname + '/public')); 
 
+app.get('*', function (req, res) {
+        res.sendfile('public/index.html');
+    })
 // routes ==================================================
 // pass our application into our routes
 require('./app/routes')(app); 
