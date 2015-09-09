@@ -4,6 +4,12 @@ angular.module('DetailsCtrl', []).controller('DetailsController', function($scop
 
 	var id = $routeParams.itemIdx
 
+	// add event listener to fb button div
+	function test(){
+		console.log('i was clicked');
+	}
+
+
 	//=========== Facebook log in code
 
 	// This is called with the results from from FB.getLoginStatus().
@@ -11,27 +17,37 @@ angular.module('DetailsCtrl', []).controller('DetailsController', function($scop
     	console.log('statusChangeCallback');
     	console.log(response);
 
-    	window.fbstatus = response.status;
-		console.log(window.fbstatus);
-
 	    if (response.status === 'connected') {
-	      // Logged into your app and Facebook.
+	      	// Logged into your app and Facebook.
+	      	console.log("logged into Facebook");
+
 	    	var uid = response.authResponse.userID;
     		var accessToken = response.authResponse.accessToken;
 
+    		console.log(uid);
+
     		// show divs for favorite & make a comment
+    		document.getElementById("fav").style.visibility = "visible";
+    		document.getElementById("lvComment").style.visibility = "visible";
 
-    		// document.getElementById("favs").style.visibility = "hidden";
-    		// document.getElementById("favs").style.visibility = "visible";
+    		
+    		// onclick:
+    		// if unselected, 
+    		// toggle to selected & push to db
+    		// else if selected
+    		// toggle to unselected, and delete from db
+
+    		// check to see if user favorited field
+	    	// if fb user id == user id in ufavs array
+	    	// then the star is selected
+	    	// else
+	    	// the star is deselected
 
 
-
-
-	    } else if (response.status === 'not_authorized') {
-	      // The person is logged into Facebook, but not your app.
-	 
 	    } else {
-
+	    	console.log("not logged in")
+	    	document.getElementById("fav").style.visibility = "hidden";
+    		document.getElementById("lvComment").style.visibility = "hidden";
 	    }
 	  }
 
@@ -39,10 +55,12 @@ angular.module('DetailsCtrl', []).controller('DetailsController', function($scop
   	// Button.  See the onlogin handler attached to it in the sample
   	// code below.
   	function checkLoginState() {
+  		console.log("checkLoginState");
     	FB.getLoginStatus(function(response) {
       		statusChangeCallback(response);
     	});
   	}
+
 
   	// initialize Facebook, getLogin Status
 	window.fbAsyncInit = function() {
@@ -51,8 +69,11 @@ angular.module('DetailsCtrl', []).controller('DetailsController', function($scop
 			cookie     : true,  // enable cookies to allow the server to access 
 		                        // the session
 			xfbml      : true,  // parse social plugins on this page
-			version    : 'v2.2' // use version 2.2
+			version    : 'v2.2', // use version 2.2
+			status		: true
 		});
+
+		console.log("Facebook initialized");
 
 		FB.getLoginStatus(function(response) {
     		statusChangeCallback(response);
@@ -67,6 +88,7 @@ angular.module('DetailsCtrl', []).controller('DetailsController', function($scop
 		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=890967984321126";
 		fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));
+
 
 	//=========== Populate the dynamic content
 

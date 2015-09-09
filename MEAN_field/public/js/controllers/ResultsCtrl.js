@@ -4,37 +4,23 @@ angular.module('ResultsCtrl', [])
 		console.log("Hello World from ResultsController!");	
 
 		//=========== Facebook log in code
-
+		/*
 		// This is called with the results from from FB.getLoginStatus().
   		function statusChangeCallback(response) {
     		console.log('statusChangeCallback');
     		console.log(response);
-
-		    if (response.status === 'connected') {
-		      // Logged into your app and Facebook.
-		    	var uid = response.authResponse.userID;
-	    		var accessToken = response.authResponse.accessToken;
-
-	    		// show divs for favorite & make a comment
-	    		document.getElementById("fav").style.visibility = "visible";
-	    		document.getElementById("lvComment").style.visibility = "visible";
-
-		    } else if (response.status === 'not_authorized') {
-		      // The person is logged into Facebook, but not your app.
-		 
-		    } else {
-
-		    }
 	  	}
 
-	// This function is called when someone finishes with the Login
-  	// Button.  See the onlogin handler attached to it in the sample
-  	// code below.
-  	function checkLoginState() {
-    	FB.getLoginStatus(function(response) {
-      		statusChangeCallback(response);
-    	});
-  	}
+		// This function is called when someone finishes with the Login
+	  	// Button.  See the onlogin handler attached to it in the sample
+	  	// code below.
+	  	function checkLoginState() {
+	  		console.log('checkLoginState');
+
+	    	FB.getLoginStatus(function(response) {
+	      		statusChangeCallback(response);
+	    	});
+	  	}
 
 	  	// initialize Facebook, getLogin Status
 		window.fbAsyncInit = function() {
@@ -59,6 +45,7 @@ angular.module('ResultsCtrl', [])
 			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=890967984321126";
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
+	*/	
 
 	//=========== Populate the dynamic content
 

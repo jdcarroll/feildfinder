@@ -1,4 +1,4 @@
-// ******* KAR:  Need to get this working with our database
+
 
 // grab the nerd model we just created
 var Results = require('./models/results');
